@@ -1,0 +1,42 @@
+.header {
+  height: 40px;
+  background: #F9F9FB;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    color: #585874;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:first-child {
+      width: 300px;
+    }
+
+    &:nth-child(2) {
+      width: 365px;
+    }
+
+    &:nth-child(3) {
+      width: 300px;
+    }
+  }
+}
+
+.report {
+  height: 40px;
+  background: #F9F9FB;
+  display: flex;
+  align-items: center;
+
+  &__header {
+    &:nth-child(2) {
+      width: 928px;
+    }
+  }
+
+  &__check {
+    margin: 0 20px 0 20px
+  }
+}

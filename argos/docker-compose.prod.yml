@@ -1,0 +1,53 @@
+version: '3.9'
+
+volumes:
+  front_build:
+  database:
+
+networks:
+  local_area:
+
+services:
+  prod_db:
+    container_name: prod_db
+    image: postgres:15.3-alpine
+    restart: always
+    networks:
+      local_area:
+
+    environment:
+      POSTGRES_USER: argos_user
+      POSTGRES_PASSWORD: 8/`v5T5pyx)4E#C=
+      POSTGRES_DB: db
+
+    volumes:
+      - database:/var/lib/postgres/data
+
+  prod_back:
+    build:
+      target: prod
+      context: backend
+      dockerfile: Dockerfile
+    command: sh -c "
+      python manage.py makemigrations &&
+      python manage.py migrate &&
+      gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - front_build:/app/src/bundle
+    environment:
+      POSTGRES_USER: argos_user
+      POSTGRES_PASSWORD: 8/`v5T5pyx)4E#C=
+    depends_on:
+      prod_db:
+        condition: service_started
+      prod_front:
+        condition: service_completed_successfully
+    networks:
+      local_area:
+
+  prod_front:
+    extends:
+      file: docker-compose.yaml
+      service: front

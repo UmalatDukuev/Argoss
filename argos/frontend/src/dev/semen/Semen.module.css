@@ -1,0 +1,158 @@
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dialogWindow {
+  width: 500px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 0 2px 10px 0 rgba(5, 6, 36, 0.10), 0 15px 40px 0 rgba(5, 6, 36, 0.15);
+}
+
+.base {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.Content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 20px 0 0 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+
+.IconHeader {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.FontHeader {
+  color: #202037;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.162px;
+}
+
+.FontLayout {
+  color: #202037;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.162px;
+
+}
+
+
+
+.TextLayout {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 44px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.modalButtonsPart {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 16px 64px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 0 0 6px 6px;
+  background: #F0F0F5;
+}
+
+.modalButtons {
+  width: 196px;
+  height: 32px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.modalButtonDelete {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 3px;
+  background: #DF202D;
+  color: #FFF;
+}
+
+.FontButtonDelete {
+  color: #585874;
+  /* 14_Medium */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  Color: #F9F9FB;
+}
+
+.modalButtonBack {
+  width: auto;
+  height: auto;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 3px;
+  background: #F0F0F5;
+  color: #FFF;
+}
+
+.FontButtonBack {
+  color: #585874;
+  /* 14_Medium */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+/* Размеры элементов */
+
+

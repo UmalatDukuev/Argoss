@@ -1,0 +1,65 @@
+.noticePopup {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 316px;
+    height: 48px;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0 2px 10px 0 rgba(5, 6, 36, 0.10), 0 15px 40px  rgba(5, 6, 36, 0.15);
+
+
+}
+
+.visible {
+    opacity: 1;
+
+}
+
+.notVisible {
+    opacity: 0;
+    transition: opacity 0.7s;
+
+}
+
+.notificationIcon {
+    padding-left: 12px;
+    width: 24px;
+    height: 24px;
+
+}
+
+.notificationIconText {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.notificationText {
+    width: 276px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    font-family: Ubuntu, sans-serif;
+    font-size: 14px;
+    color: #202037;
+    padding-top: 6px;
+    align-items: flex-start;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.notification {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}

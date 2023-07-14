@@ -1,0 +1,27 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button{
+  color: #4E4EE4;
+  height: 32px;
+  width: 32px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+
+.pagBtn {
+  color: #2F2F46;
+  height: 32px;
+  width: 32px;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #B9B9CB;
+}
+
+
+/*# sourceMappingURL=Pagination.module.css.map */

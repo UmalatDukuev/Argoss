@@ -1,0 +1,63 @@
+version: '3.9'
+
+volumes:
+  front_build:
+
+services:
+  db:
+    container_name: project_db
+    image: postgres:15.3-alpine
+
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: db
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+  
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+
+  back:
+    build:
+      dockerfile: Dockerfile
+      target: dev
+      context: ./backend
+    command: sh -c "
+      python manage.py migrate &&
+      python manage.py fill_db &&
+      python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend/src/api:/app/api
+      - ./backend/src/react:/app/react
+      - ./backend/src/rosatom:/app/rosatom
+      - front_build:/app/bundle
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  front:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - front_build:/app/build
+      - ./frontend/public:/app/public
+      - ./frontend/src:/app/src
+      - ./frontend/package.json:/app/package.json
+    depends_on:
+      - back
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"

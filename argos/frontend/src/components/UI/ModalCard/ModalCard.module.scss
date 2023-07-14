@@ -1,0 +1,93 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.3);
+
+  animation-name: popup;
+  animation-duration: 0.3s;
+}
+
+.container {
+  padding: 20px 24px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.modalCard {
+  border-radius: 6px;
+  background: #FFF;
+  box-shadow: 0 2px 6px 0 rgba(5, 6, 36, 0.10), 0 8px 20px 0 rgba(5, 6, 36, 0.15);
+
+  display: flex;
+  flex-direction: column;
+
+  &__wide {
+    width: 580px;
+    height: 491px;
+  }
+
+  &__long {
+    width: 440px;
+    height: 700px;
+  }
+
+  &__square {
+    width: 400px;
+    height: 400px;
+  }
+
+  &__adaptive {
+    
+  }
+
+  &__header {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #DBDBE5;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__closeIcon {
+    cursor: pointer;
+
+    fill: black;
+    transition-duration: 0.2s;
+
+    &:hover {
+      fill: #4E4EE4;
+    }
+  }
+
+  &__footer {
+    padding: 16px 24px;
+    background: #F0F0F5;
+    border-radius: 0 0 6px 6px;
+
+    border-bottom: 1px solid #DBDBE5;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__mainButton {
+    display: flex;
+    gap: 0 8px;
+  }
+}

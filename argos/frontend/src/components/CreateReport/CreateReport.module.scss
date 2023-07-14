@@ -1,0 +1,27 @@
+.reportList {
+  height: 100%;
+  overflow: auto;
+}
+
+.reportItem {
+  display: flex;
+  gap: 0 20px;
+
+  padding: 16px 20px;
+  border-bottom: 1px solid #DBDBE5;
+
+  transition-duration: 0.2s;
+
+  &__checkbox {
+
+  }
+
+  &__name {
+    color: #4E4EE4;
+    font-weight: 500;
+  }
+
+  &:hover {
+    background: #F9F9FB;
+  }
+}

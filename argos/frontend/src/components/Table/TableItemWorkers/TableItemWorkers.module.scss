@@ -1,0 +1,37 @@
+.row {
+  height: 48px;
+  border-top: 1px solid rgba(219, 219, 229, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+
+  &:last-child {
+    border-bottom: 1px solid rgba(219, 219, 229, 1);
+  }
+
+  &__block {
+    color: #7A7A94;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+
+    &:first-child {
+      cursor: pointer;
+      width: 300px;
+      font-weight: 500;
+      color: #4E4EE4;
+    }
+
+    &:nth-child(2) {
+      width: 365px;
+    }
+
+    &:nth-child(3) {
+      width: 300px;
+    }
+
+    &:last-child {
+      color: #585874;
+    }
+  }
+}

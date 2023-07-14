@@ -1,0 +1,36 @@
+.header {
+  height: 40px;
+  background: #F9F9FB;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.header__item {
+  color: #585874;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header__item:first-child {
+  width: 300px;
+}
+.header__item:nth-child(2) {
+  width: 365px;
+}
+.header__item:nth-child(3) {
+  width: 300px;
+}
+
+.report {
+  height: 40px;
+  background: #F9F9FB;
+  display: flex;
+  align-items: center;
+}
+.report__header:nth-child(2) {
+  width: 928px;
+}
+.report__check {
+  margin: 0 20px 0 20px;
+}
+
+/*# sourceMappingURL=TableHeader.module.css.map */

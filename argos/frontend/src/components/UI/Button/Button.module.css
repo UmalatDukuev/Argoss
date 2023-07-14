@@ -1,0 +1,83 @@
+.baseBtn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.commonBtn__row {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3237B3;
+  border-radius: 6px;
+}
+
+.commonBtn__img {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.commonBtn__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.openBtn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 0 0 8px;
+}
+
+.textBtn {
+  padding-left: 7px;
+  color: #9999AD;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.moduleBtn {
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+.moduleBtn__text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.moduleBtn__buttonGrey {
+  background-color: #F0F0F5;
+  color: #585874;
+}
+.moduleBtn__buttonRed {
+  background-color: #DF202D;
+  color: #F9F9FB;
+}
+.moduleBtn__buttonViolet {
+  background-color: #4E4EE4;
+  color: #F9F9FB;
+}
+.moduleBtn__redText {
+  background-color: #F0F0F5;
+  color: #DF202D;
+}
+.moduleBtn__border {
+  border: 1px solid #B9B9CB;
+}
+
+/*# sourceMappingURL=Button.module.css.map */

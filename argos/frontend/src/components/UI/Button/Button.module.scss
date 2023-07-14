@@ -1,0 +1,155 @@
+.baseBtn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+
+  &__disabled {
+
+  }
+}
+
+.sideBar {
+  &__button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__selected {
+
+  }
+
+  &__text {
+    padding-left: 7px;
+    color: #9999AD;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__Btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+  }
+
+  &__open {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 0 0 8px;
+    transition-duration: 0.5s;
+  }
+
+  &__img {
+
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+
+    }
+
+  }
+
+}
+
+
+.moduleBtn {
+  padding: 8px 16px;
+  border-radius: 3px;
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  &__buttonGrey {
+    background-color: #F0F0F5;
+    color: #585874;
+    transition-duration: 0.2s;
+
+    &:hover {
+      background-color: #DBDBE5;
+      color: #111122;
+    }
+
+    &:active {
+      background-color: #c2c2d3;
+    }
+  }
+
+  &__buttonRed {
+    background-color: #DF202D;
+    color: #F9F9FB;
+
+    &:hover {
+      background-color: #AB091E;
+    }
+
+    &:active {
+      background-color: #8A041A;
+    }
+  }
+
+  &__buttonViolet {
+    background-color: #4E4EE4;
+    color: #F9F9FB;
+    transition-duration: 0.2s;
+
+    &:hover {
+      background-color: #3237B3;
+    }
+
+    &:active {
+      background-color: #1D188B;
+    }
+  }
+
+  &__redText {
+    background-color: #F0F0F5;
+    color: #DF202D;
+    transition-duration: 0.2s;
+
+    &:hover {
+      background-color: #FFE3E3;
+      color: #AB091E;
+    }
+
+    &:active {
+      background-color: #FFBDBD;
+      color: #8A041A;
+    }
+  }
+
+  &__border {
+    border: 1px solid #B9B9CB;
+
+    &:hover {
+      border: 1px solid #7A7A94;
+    }
+
+    &:active {
+      border: 1px solid #2F2F46;
+    }
+  ;
+  }
+
+}
